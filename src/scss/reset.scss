@@ -76,6 +76,15 @@ $color-f6f6f6: #f6f6f6;
 $color-2a2a2a: #2a2a2a;
 $color-323232: #323232;
 
+.btn{
+  border: none;
+  font-size: 0.16rem;
+  color: $color-ffffff;
+  background-color: $color-0F85FF;
+  border-radius: 0.05rem;
+  height: 0.44rem;
+  outline: none;
+}
 body{
   font-size: 0.12rem;
   background-color: $color-f7f7f7;
