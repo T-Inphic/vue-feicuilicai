@@ -1,52 +1,117 @@
 <template>
   <div class="homeBox">
-    <div>
-      <div class="head">为您准备大礼</div>
-      <div class="coupon">
-        <ul>
-          <li>
-            <div class="item">
-              <div>
-                <p class="fxhbIcon"></p>
-                <div class="text">
-                  <p>返现红包5张</p>
-                  <p>可提现</p>
-                </div>
+    <div class="head">为您准备大礼</div>
+    <div class="coupon">
+      <ul>
+        <li>
+          <div class="item">
+            <div>
+              <p class="fxhbIcon"></p>
+              <div class="text">
+                <p>返现红包{{act.cashBackCount}}张</p>
+                <p>可提现</p>
               </div>
-              <div><span class="number">518</span>元</div>
             </div>
-            <i class="courtesy-icon"></i>
-          </li>
-          <li>
-            <div class="item">
-              <div>
-                <p class="tyjIcon"></p>
-                <div class="text">
-                  <p>新手体验金</p>
-                  <p>无需本金，坐享收益</p>
-                </div>
+            <div><span class="number">{{act.cashBackAmount}}</span>元</div>
+          </div>
+          <i class="courtesy-icon"></i>
+        </li>
+        <li>
+          <div class="item">
+            <div>
+              <p class="tyjIcon"></p>
+              <div class="text">
+                <p>新手体验金</p>
+                <p>无需本金，坐享收益</p>
               </div>
-              <div><span class="number">13888</span>元</div>
             </div>
-            <i class="courtesy-icon"></i>
+            <div><span class="number">{{Number(act.experienceAmount)|thousand}}</span>元</div>
+          </div>
+          <i class="courtesy-icon"></i>
+        </li>
+      </ul>
+      <div class="btnBox"><button class="btn">立即注册领取</button></div>
+    </div>
+    <div class="carouselBox">
+      <swiper :options="swiperOption" ref="mySwiper">
+      <!-- slides -->
+      <swiper-slide v-for="item in banner" :key="item.id"><img :src="item.imgUrl" alt=""></swiper-slide>
+      <!-- Optional controls -->
+      <div class="swiper-pagination"  slot="pagination"></div>
+    </swiper>
+    </div>
+    <div class="planBox">
+      <p class="title">翡翠计划</p>
+      <div class="profit"><p class="big"><span>7.0</span>%</p><p class="small"><span>+1.0</span>%</p></div>
+      <p class="year">预期年化收益</p>
+      <div class="tabBox">
+        <ul class="tab">
+          <li v-for="item in day" :key="item">
+            <p>{{item}}天</p>
+            <p class="logoIcon"></p>
           </li>
         </ul>
-        <div class="btnBox"><button class="btn">立即注册领取</button></div>
       </div>
     </div>
+    <div class="safeBox">
+      <p class="title">平台保障</p>
+      <ul>
+        <li>
+          <p></p>
+          <p>A股上市公司<br/>投资背景</p>
+        </li>
+        <li>
+          <p></p>
+          <p>银行风控标准<br/>精选优质资产</p>
+        </li>
+        <li>
+          <p></p>
+          <p>专业金牌律所<br/>保障合法合规</p>
+        </li>
+      </ul>
+    </div>
+    <p class="tipText">市场有风险，投资需谨慎</p>
   </div>
 </template>
 
 <script>
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
+ 
 export default {
   name: 'Home',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      act: '',
+      banner: [],
+      range: [],
+      swiperOption: {  
+        notNextTick: true,  
+        pagination: '.swiper-pagination',  
+        slidesPerView: 'auto',  
+        centeredSlides: true,  
+        paginationClickable: true,  
+        // spaceBetween: 30,
+        autoplay: true,
+      },
+      day: [30,90,180,360]
     }
   },
+  components: {
+    swiper,
+    swiperSlide
+  },
+  created() {
+    let self = this;
+    this.$http.get('/home').then(function(res){
+      self.banner = res.data.data.banner;
+      self.range = res.data.data.range;
+      self.act = res.data.data.act;
+    })
+  },
   methods: {
-    
+    swiper() {  
+      return this.$refs.mySwiper.swiper;  
+    } 
   }
 }
 </script>
@@ -67,6 +132,11 @@ export default {
     li{
       position: relative;
       margin-bottom: 0.14rem;
+      &:last-child{
+      .courtesy-icon{
+          background-position: -0.40rem 0;
+        }
+      }
     }
     .btnBox{
       margin-top: 0.18rem;
@@ -88,7 +158,7 @@ export default {
       flex: 1;
       &:first-child{
         display: flex;
-        justify-content: flex-start;
+        align-items: center;
       };
       &:last-child{
         text-align: right;
@@ -108,10 +178,15 @@ export default {
       width: 0.36rem;
       height: 0.36rem;
       margin-right: 0.08rem;
+      background: url('/src/assets/images/home-icon-1.png') no-repeat 0 0;
+      background-size: cover;
+    }
+    .tyjIcon{
+      background-position: -0.39rem;
     }
     .number{
-      font-size: 0.32rem;
-      color: #323232;
+      font-size: 0.3rem;
+      color: $color-333333;
     }
   }
   .courtesy-icon{
@@ -120,5 +195,139 @@ export default {
     right: 0;
     width: 0.385rem;
     height: 0.385rem;
+    background: url('/src/assets/images/home-icon-2.png') no-repeat;
+    background-size: cover;
+  }
+  .carouselBox{
+    height: 1rem;
+    margin-top: 0.1rem;
+    background-color: $color-ffffff;
+    img{
+      width: 100%;
+      height: 1rem;
+    }
+  }
+  .title{
+    font-size: 0.16rem;
+    font-weight: 600;
+    color: $color-333333;
+    text-align: center;
+    padding: 0.1rem 0 0.1rem;
+  }
+  .planBox{
+    height: 2.6rem;
+    margin-top: 0.1rem;
+    background-color: $color-ffffff;
+    .profit{
+      text-align: center;
+      color: $color-ff6300;
+      font-size: 0.1rem;
+      p{
+        display: inline-block;
+      }
+    }
+    .big{
+      span{
+        font-size: 0.42rem;
+      }
+    }
+    .small{
+      span{
+        font-size: 0.22rem;
+      }
+    }
+    .year{
+      font-size: 0.12rem;
+      color: $color-999999;
+      text-align: center;
+    }
+  }
+  .safeBox{
+    height: 1.6rem;
+    margin-top: 0.1rem;
+    background-color: $color-ffffff;
+    ul{
+      display: flex;
+
+    }
+    li{
+      flex: 1;
+      p{
+        color: $color-aaaaaa;
+        font-size: 0.11rem;
+        text-align: center;
+        &:first-child{
+          width: 0.5rem;
+          height: 0.5rem;
+          margin: 0 auto 0.05rem;
+          background: url('/src/assets/images/home-icon-4.png') no-repeat;
+          background-size: auto 100%;
+        }
+      }
+      &:nth-child(2){
+        p{
+          &:first-child{
+            background-position: -0.52rem 0;
+          }
+        }
+      }
+      &:nth-child(3){
+        p{
+          &:first-child{
+            background-position: -1.04rem 0;
+          }
+        }
+      }
+    }
+  }
+  .tipText{
+    text-align: center;
+    font-size: 0.12rem;
+    color: $color-c8c8c8;
+    padding: 0.1rem 0;
+  }
+  .tabBox{
+    padding: 0 0.14rem;
+  }
+  .tab{
+    display: flex;
+    justify-content: space-between;
+    color: $color-666666;
+    font-size: 0.12rem;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0.12rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 94%;
+      height: 0.05rem;
+      border-radius: 1rem;
+      background-color: $color-0F85FF;
+    }
+    .logoIcon{
+      
+    }
+    li{
+      height: 0.6rem;
+      p{
+        &:first-child{
+          position: relative;
+          &:after{
+            position: absolute;
+            bottom: -0.1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 0.03rem solid transparent;
+            border-right: 0.03rem solid transparent;
+            border-top: 0.036rem solid $color-0F85FF;
+          }
+        }
+      }
+    }
   }
 </style>

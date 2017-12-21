@@ -1,0 +1,95 @@
+{
+    "banner": [
+        {
+            "id": 70,
+            "imgUrl": "http://jsapi.iok.la:8888/upload/banner/2017-12/20171215e2dd9c55-4a68-4003-9e3f-f23c902a7416.jpg",
+            "location": "http://jsapi.iok.la:8888/c/user/invite",
+            "sort": 9,
+            "title": "邀请好友双重奏",
+            "subtitle": "邀请好友",
+            "shareImagurl": "http://jsapi.iok.la:8888/upload/share2017-12/201712158f20c523-f0f7-4b9f-970e-a5e94fb2deac.jpeg",
+            "shareMainTitle": "邀请"
+        },
+        {
+            "id": 67,
+            "imgUrl": "http://jsapi.iok.la:8888/upload/banner/2017-12/20171215b3daaf48-4550-45ec-897e-4faecf3fe251.jpg",
+            "location": "http://jsapi.iok.la:8888/c/firm",
+            "sort": 8,
+            "title": "翡翠岛合作律所",
+            "subtitle": "合作律所",
+            "shareImagurl": "http://jsapi.iok.la:8888/upload/share2017-12/201712155db3504a-9880-40e8-8a44-f9368b79c70e.jpg",
+            "shareMainTitle": "翡翠岛"
+        },
+        {
+            "id": 65,
+            "imgUrl": "http://jsapi.iok.la:8888/upload/banner/2017-12/20171215eeae7711-64a4-485c-99b1-253186090a1a.jpg",
+            "location": "http://jsapi.iok.la:8888/c/activities/s12",
+            "sort": 7,
+            "title": "双十二狂欢活动",
+            "subtitle": "双十二活动",
+            "shareImagurl": "http://jsapi.iok.la:8888/upload/share2017-12/201712155db3504a-9880-40e8-8a44-f9368b79c70e.jpg",
+            "shareMainTitle": "双十二"
+        },
+        {
+            "id": 68,
+            "imgUrl": "http://jsapi.iok.la:8888/upload/banner/2017-12/201712150ab8b1f2-b82c-4b4d-b37d-e857ec842a54.jpg",
+            "location": "http://jsapi.iok.la:8888/c/about/us",
+            "sort": 6,
+            "title": "上市公司投资背景",
+            "subtitle": "投资背景",
+            "shareImagurl": "http://jsapi.iok.la:8888/upload/share2017-12/201712155db3504a-9880-40e8-8a44-f9368b79c70e.jpg",
+            "shareMainTitle": "上市公司"
+        },
+        {
+            "id": 85,
+            "imgUrl": "http://jsapi.iok.la:8888/upload/banner/2017-12/201712162a8055bf-a35f-469a-82ad-c0f7d1f661a5.jpg",
+            "location": "http://jsapi.iok.la:8888/c/activity/newcomer",
+            "sort": 5,
+            "title": "新手福利",
+            "subtitle": "新手注册",
+            "shareImagurl": "http://jsapi.iok.la:8888/upload/share2017-12/201712165101675e-1f34-47ae-a369-74654c94ff92.jpg",
+            "shareMainTitle": "新手福利大礼包"
+        },
+        {
+            "id": 98,
+            "imgUrl": "http://jsapi.iok.la:8888/upload/banner/2017-12/201712160ddeba21-58b9-4d9b-bbf2-c0385c282b86.jpg",
+            "location": "http://jsapi.iok.la:8888/c/activities/sdan",
+            "sort": 0,
+            "title": "双旦活动",
+            "subtitle": "双蛋",
+            "shareImagurl": "https://file.feicuilicai.com/upload/share2017-12/201712205a07f4a3-68f4-4430-a424-b38c8d9e13ef.png",
+            "shareMainTitle": "双旦活动大礼包"
+        }
+    ],
+    "range": [
+        {
+            "baseRate": 6,
+            "activityRate": 6,
+            "income": 100,
+            "flag": 30
+        },
+        {
+            "baseRate": 8.5,
+            "activityRate": 2,
+            "income": 262.5,
+            "flag": 90
+        },
+        {
+            "baseRate": 7.5,
+            "activityRate": 1,
+            "income": 425,
+            "flag": 180
+        },
+        {
+            "baseRate": 10.5,
+            "activityRate": 0,
+            "income": 1050,
+            "flag": 360
+        }
+    ],
+    "act": {
+        "cashBackAmount": 518,
+        "cashBackCount": 5,
+        "experienceAmount": 13888
+    }
+}
