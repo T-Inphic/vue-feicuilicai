@@ -30,7 +30,7 @@
           <i class="courtesy-icon"></i>
         </li>
       </ul>
-      <div class="btnBox"><button class="btn">立即注册领取</button></div>
+      <div class="btnBox"><router-link to="/login" class="btn">立即注册领取</router-link></div>
     </div>
     <div class="carouselBox">
       <swiper :options="swiperOption" ref="mySwiper">
@@ -42,15 +42,17 @@
     </div>
     <div class="planBox">
       <p class="title">翡翠计划</p>
-      <div class="profit"><p class="big"><span>7.0</span>%</p><p class="small"><span>+1.0</span>%</p></div>
+      <div class="profit" v-if="range.length>0"><p class="big"><span>{{range[index].baseRate}}</span>%</p><p class="small"><span>+{{range[index].activityRate}}</span>%</p></div>
       <p class="year">预期年化收益</p>
       <div class="tabBox">
         <ul class="tab">
-          <li v-for="item in day" :key="item">
+          <li v-for="(item, $index) in day" :key="item" @click="tab($index)" :class="{active: $index == index}">
             <p>{{item}}天</p>
             <p class="logoIcon"></p>
           </li>
         </ul>
+        <p class="result" v-if="range.length>0">投资10,000元，预计收益<span class="small">{{range[index].flag}}</span>元</p>
+        <div class="btnBox"><router-link to="/">立即投资</router-link></div>
       </div>
     </div>
     <div class="safeBox">
@@ -76,6 +78,8 @@
 
 <script>
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
+// import { mapGetters, mapActions } from 'vuex'
+
  
 export default {
   name: 'Home',
@@ -84,6 +88,7 @@ export default {
       act: '',
       banner: [],
       range: [],
+      index: 0,
       swiperOption: {  
         notNextTick: true,  
         pagination: '.swiper-pagination',  
@@ -100,6 +105,11 @@ export default {
     swiper,
     swiperSlide
   },
+  // computed: {
+  //   ...mapGetters({
+  //     isLogin: 'login'
+  //   })
+  // },
   created() {
     let self = this;
     this.$http.get('/home').then(function(res){
@@ -109,9 +119,12 @@ export default {
     })
   },
   methods: {
-    swiper() {  
+    swiper() {
       return this.$refs.mySwiper.swiper;  
-    } 
+    },
+    tab(day) {
+      this.index = day;
+    }
   }
 }
 </script>
@@ -144,6 +157,8 @@ export default {
     }
     .btn{
       width: 100%;
+      display: block;
+      line-height: 0.45rem;
     }
   }
   .item{
@@ -288,6 +303,20 @@ export default {
   }
   .tabBox{
     padding: 0 0.14rem;
+    .result{
+      text-align: center;
+      margin: 0.09rem 0 0.08rem 0;
+    }
+    .btnBox{
+      height: 0.4rem;
+      a{
+        color: $color-0F85FF;
+        font-size: 0.16rem;
+        display: block;
+        text-align: center;
+        line-height: 0.4rem;
+      }
+    }
   }
   .tab{
     display: flex;
@@ -311,6 +340,21 @@ export default {
     }
     li{
       height: 0.6rem;
+      position: relative;
+      &.active{
+        &:after{
+          position: absolute;
+          width: 0.28rem;
+          height: 0.28rem;
+          content: '';
+          bottom: 0;
+          left: 50%;
+          margin-left: -0.14rem;
+          background: url('/src/assets/images/tabBg.png') no-repeat;
+          background-size: cover;
+          z-index: 10;
+        }
+      }
       p{
         &:first-child{
           position: relative;

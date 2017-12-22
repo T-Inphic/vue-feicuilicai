@@ -6,7 +6,7 @@ import Bottom from '@/views/base/bottom'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -16,14 +16,29 @@ export default new Router({
       children:[
       	{
       		path: 'home',
+      		name: 'home',
       		component: Home,
+      		meta: {
+      			requireAth: true
+      		}
       	}
       ]
     },
     {
       path: '/login',
-      name: 'Login',
+      name: 'login',
       component: Login
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+	next()
+	// if(to.meta.requireAth){
+	// 	next()
+	// }else{
+
+	// }
+})
+
+export default router
