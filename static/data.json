@@ -91,5 +91,9 @@
         "cashBackAmount": 518,
         "cashBackCount": 5,
         "experienceAmount": 13888
+    },
+    "login": {
+        "phone": 18632100000,
+        "password": "a123456"
     }
 }

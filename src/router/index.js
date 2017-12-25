@@ -7,6 +7,7 @@ import Bottom from '@/views/base/bottom'
 Vue.use(Router)
 
 const router = new Router({
+  linkActiveClass: 'active',
   routes: [
     {
       path: '/',

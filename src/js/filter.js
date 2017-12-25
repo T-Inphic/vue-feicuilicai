@@ -7,3 +7,7 @@ Vue.filter('thousand', function(val){
 	}); 
 	return n1
 })
+Vue.filter('phone', function(val){
+	let result = val.toString().slice(0,3)+'****'+val.toString().slice(-4);
+	return result
+})

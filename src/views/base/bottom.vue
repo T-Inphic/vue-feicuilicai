@@ -10,14 +10,14 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/">
+          <router-link to="/invest">
             <p></p>
             <p>投资</p>
           </router-link>
           
         </li>
         <li>
-          <router-link to="/">
+          <router-link to="/my">
             <p></p>
             <p>我的</p>
           </router-link>
@@ -48,7 +48,7 @@ export default {
 }
 .bottom{
   box-sizing: border-box;
-  @include border-1px(#e5e5e5,true);
+  @include border-1px(#e5e5e5,true,false);
   height: 0.48rem;
   position: fixed;
   bottom: 0;
@@ -64,7 +64,61 @@ export default {
       justify-content: center;
       align-items: center;
       font-size: 0.11rem;
-      color: $color-666666;
+      &:nth-child(2){
+        a{
+          p{
+            &:first-child{
+              background-position: -0.22rem 0;
+            }
+          }
+          &.active{
+            color: $color-0F85FF;
+            p{
+              &:first-child{
+                background-position: 0 -0.22rem;
+              }
+            }
+          }
+        }
+      }
+      &:last-child{
+        a{
+          p{
+            &:first-child{
+              background-position: -0.44rem 0;
+            }
+          }
+          &.active{
+            color: $color-0F85FF;
+            p{
+              &:first-child{
+                background-position: 0 -0.22rem;
+              }
+            }
+          }
+        }
+      }
+      a{
+        display: block;
+        color: $color-666666;
+        p{
+          &:first-child{
+            width: 0.22rem;
+            height: 0.22rem;
+            background: url('/src/assets/images/tab_icon.png') no-repeat;
+            background-size: 300%;
+            margin-bottom: 0.02rem;
+          }
+        }
+        &.active{
+          color: $color-0F85FF;
+          p{
+            &:first-child{
+              background-position: 0 -0.22rem;
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -12,6 +12,7 @@ import 'swiper/dist/css/swiper.css'
 import 'muse-ui/dist/muse-ui.css'
 import '../src/js/fontSize.js'
 import '../src/js/filter.js'
+import '../src/js/directive.js'
 
 
 Vue.config.productionTip = false

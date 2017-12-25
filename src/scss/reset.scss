@@ -86,6 +86,9 @@ $color-ff6300: #ff6300;
   height: 0.44rem;
   outline: none;
 }
+.gray{
+  background-color: $color-c8c8c8;
+}
 body{
   font-size: 0.12rem;
   background-color: $color-f7f7f7;
@@ -125,15 +128,17 @@ body{
     }
   }
 }
-@mixin border-1px($color,$top){
+@mixin border-1px($color,$top,$after){
   position: relative;
-  &:after{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-top: 1px solid $color;
-    content: '';
+  @if $after{
+    &:after{
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-top: 1px solid $color;
+      content: '';
+    }
   }
   @if $top {
     &:before{
