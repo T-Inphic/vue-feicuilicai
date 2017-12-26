@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/home/Home'
+import Invest from '@/views/invest/Invest'
+import My from '@/views/my/My'
 import Login from '@/views/login/Login'
 import Bottom from '@/views/base/bottom'
 
@@ -22,6 +24,16 @@ const router = new Router({
       		meta: {
       			requireAth: true
       		}
+      	},
+      	{
+      		path: 'invest',
+      		name: 'invest',
+      		component: Invest,
+      	},
+      	{
+      		path: 'my',
+      		name: 'my',
+      		component: My,
       	}
       ]
     },

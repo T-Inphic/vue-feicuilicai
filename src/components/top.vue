@@ -1,6 +1,6 @@
 <template>
   <div class="topBox">
-    <div><span ng-if="param.left" @click="back()"></span></div>
+    <div><span v-if="param.left" @click="back()"></span></div>
     <div>{{param.title}}</div>
     <div>{{param.right}}</div>
   </div>

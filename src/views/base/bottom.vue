@@ -4,7 +4,7 @@
     <div class="bottom">
       <ul>
         <li>
-          <router-link to="/">
+          <router-link to="/home">
             <p></p>
             <p>首页</p>
           </router-link>
@@ -14,7 +14,6 @@
             <p></p>
             <p>投资</p>
           </router-link>
-          
         </li>
         <li>
           <router-link to="/my">
@@ -75,7 +74,7 @@ export default {
             color: $color-0F85FF;
             p{
               &:first-child{
-                background-position: 0 -0.22rem;
+                background-position: -0.22rem -0.22rem;
               }
             }
           }
@@ -92,7 +91,7 @@ export default {
             color: $color-0F85FF;
             p{
               &:first-child{
-                background-position: 0 -0.22rem;
+                background-position: -0.44rem -0.22rem;
               }
             }
           }

@@ -95,5 +95,681 @@
     "login": {
         "phone": 18632100000,
         "password": "a123456"
-    }
+    },
+    "productList": [
+        {
+            "id": 61,
+            "name": "翡翠计划30天第二十一期",
+            "status": 5,
+            "rate": 7.5,
+            "activityrate": 1,
+            "deadline": 30,
+            "isTop": 1,
+            "labelIds": "4",
+            "labelList": [
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": 14,
+            "smallLabelStr": "钱多",
+            "raiseProgress": 78
+        },
+        {
+            "id": 56,
+            "name": "翡翠计划30天第十八期",
+            "status": 5,
+            "rate": 6,
+            "activityrate": 1,
+            "deadline": 30,
+            "isTop": 1,
+            "labelIds": "4",
+            "labelList": [
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": 12,
+            "smallLabelStr": "超多钱",
+            "raiseProgress": 40
+        },
+        {
+            "id": 55,
+            "name": "翡翠计划30天第十七期",
+            "status": 5,
+            "rate": 6,
+            "activityrate": 1,
+            "deadline": 30,
+            "isTop": 1,
+            "labelIds": "4,3",
+            "labelList": [
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                },
+                {
+                    "id": 3,
+                    "name": "加息卷",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:18",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": 12,
+            "smallLabelStr": "超多钱",
+            "raiseProgress": 81.2
+        },
+        {
+            "id": 59,
+            "name": "翡翠计划90天第二十期",
+            "status": 5,
+            "rate": 7.5,
+            "activityrate": 1,
+            "deadline": 90,
+            "isTop": 1,
+            "labelIds": "4,3",
+            "labelList": [
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                },
+                {
+                    "id": 3,
+                    "name": "加息卷",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:18",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": 12,
+            "smallLabelStr": "超多钱",
+            "raiseProgress": 77
+        },
+        {
+            "id": 31,
+            "name": "翡翠计划90天第十五期",
+            "status": 5,
+            "rate": 7.5,
+            "activityrate": 1,
+            "deadline": 90,
+            "isTop": 1,
+            "labelIds": "1",
+            "labelList": [
+                {
+                    "id": 1,
+                    "name": "收益稳健",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:28:59",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": 7
+                }
+            ],
+            "smallLabel": 7,
+            "smallLabelStr": "定标",
+            "raiseProgress": 20
+        },
+        {
+            "id": 27,
+            "name": "翡翠计划90天第十三期",
+            "status": 5,
+            "rate": 7.5,
+            "activityrate": 0.3,
+            "deadline": 90,
+            "isTop": 1,
+            "labelIds": "4",
+            "labelList": [
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": 4,
+            "smallLabelStr": "返现红包",
+            "raiseProgress": 10
+        },
+        {
+            "id": 50,
+            "name": "翡翠计划180天第六期",
+            "status": 5,
+            "rate": 7.5,
+            "activityrate": 1,
+            "deadline": 180,
+            "isTop": 1,
+            "labelIds": "4,3",
+            "labelList": [
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                },
+                {
+                    "id": 3,
+                    "name": "加息卷",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:18",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": 10,
+            "smallLabelStr": "收益多",
+            "raiseProgress": 48
+        },
+        {
+            "id": 49,
+            "name": "翡翠计划180天第五期",
+            "status": 5,
+            "rate": 7.5,
+            "activityrate": 1,
+            "deadline": 180,
+            "isTop": 1,
+            "labelIds": "4,3",
+            "labelList": [
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                },
+                {
+                    "id": 3,
+                    "name": "加息卷",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:18",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": 12,
+            "smallLabelStr": "超多钱",
+            "raiseProgress": 24
+        },
+        {
+            "id": 43,
+            "name": "翡翠计划360天第六期",
+            "status": 5,
+            "rate": 10.5,
+            "activityrate": 0,
+            "deadline": 360,
+            "isTop": 1,
+            "labelIds": "4,3",
+            "labelList": [
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                },
+                {
+                    "id": 3,
+                    "name": "加息卷",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:18",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": 10,
+            "smallLabelStr": "收益多",
+            "raiseProgress": 44.52
+        },
+        {
+            "id": 42,
+            "name": "翡翠计划360天第五期",
+            "status": 5,
+            "rate": 7.5,
+            "activityrate": 0,
+            "deadline": 360,
+            "isTop": 1,
+            "labelIds": "4,3",
+            "labelList": [
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                },
+                {
+                    "id": 3,
+                    "name": "加息卷",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:18",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": 9,
+            "smallLabelStr": "钱",
+            "raiseProgress": 2.31
+        },
+        {
+            "id": 35,
+            "name": "翡翠计划360天第三期",
+            "status": 5,
+            "rate": 10.5,
+            "activityrate": 0,
+            "deadline": 360,
+            "isTop": 1,
+            "labelIds": "1",
+            "labelList": [
+                {
+                    "id": 1,
+                    "name": "收益稳健",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:28:59",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": 7
+                }
+            ],
+            "smallLabel": 10,
+            "smallLabelStr": "收益多",
+            "raiseProgress": 0
+        },
+        {
+            "id": 11,
+            "name": "翡翠计划第7天一期",
+            "status": 5,
+            "rate": 7.5,
+            "activityrate": 1,
+            "deadline": 7,
+            "isTop": 0,
+            "labelIds": "",
+            "labelList": [],
+            "smallLabel": null,
+            "smallLabelStr": null,
+            "raiseProgress": 20
+        },
+        {
+            "id": 24,
+            "name": "翡翠计划90天第十期",
+            "status": 5,
+            "rate": 8.5,
+            "activityrate": 2,
+            "deadline": 90,
+            "isTop": 0,
+            "labelIds": "",
+            "labelList": [],
+            "smallLabel": null,
+            "smallLabelStr": null,
+            "raiseProgress": 10
+        },
+        {
+            "id": 21,
+            "name": "翡翠计划90天第八期",
+            "status": 5,
+            "rate": 7.5,
+            "activityrate": 1,
+            "deadline": 90,
+            "isTop": 0,
+            "labelIds": "3,4",
+            "labelList": [
+                {
+                    "id": 3,
+                    "name": "加息卷",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:18",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                },
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": null,
+            "smallLabelStr": null,
+            "raiseProgress": 0
+        },
+        {
+            "id": 58,
+            "name": "翡翠计划30天第二十期",
+            "status": 8,
+            "rate": 6,
+            "activityrate": 6,
+            "deadline": 30,
+            "isTop": 1,
+            "labelIds": "",
+            "labelList": [],
+            "smallLabel": 12,
+            "smallLabelStr": "超多钱",
+            "raiseProgress": 100
+        },
+        {
+            "id": 57,
+            "name": "翡翠计划30天第十九期",
+            "status": 8,
+            "rate": 6,
+            "activityrate": 0.5,
+            "deadline": 30,
+            "isTop": 1,
+            "labelIds": "3,4",
+            "labelList": [
+                {
+                    "id": 3,
+                    "name": "加息卷",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:18",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                },
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": 14,
+            "smallLabelStr": "钱多",
+            "raiseProgress": 100
+        },
+        {
+            "id": 54,
+            "name": "翡翠计划90天第十九期",
+            "status": 8,
+            "rate": 7.5,
+            "activityrate": 1,
+            "deadline": 90,
+            "isTop": 0,
+            "labelIds": "3,4,2,1",
+            "labelList": [
+                {
+                    "id": 3,
+                    "name": "加息卷",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:18",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                },
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": 13,
+            "smallLabelStr": "角标签",
+            "raiseProgress": 100
+        },
+        {
+            "id": 53,
+            "name": "翡翠计划30天第十六期",
+            "status": 8,
+            "rate": 6.5,
+            "activityrate": 0.5,
+            "deadline": 30,
+            "isTop": 1,
+            "labelIds": "3,4,2,1",
+            "labelList": [
+                {
+                    "id": 3,
+                    "name": "加息卷",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:18",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                },
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": 12,
+            "smallLabelStr": "超多钱",
+            "raiseProgress": 100
+        },
+        {
+            "id": 48,
+            "name": "翡翠计划30天第十四期",
+            "status": 8,
+            "rate": 7.5,
+            "activityrate": 1,
+            "deadline": 30,
+            "isTop": 1,
+            "labelIds": "4,3",
+            "labelList": [
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                },
+                {
+                    "id": 3,
+                    "name": "加息卷",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:18",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": 11,
+            "smallLabelStr": "特惠",
+            "raiseProgress": 100
+        },
+        {
+            "id": 52,
+            "name": "翡翠计划30天第十五期",
+            "status": 8,
+            "rate": 7.5,
+            "activityrate": 1,
+            "deadline": 30,
+            "isTop": 0,
+            "labelIds": "3,4",
+            "labelList": [
+                {
+                    "id": 3,
+                    "name": "加息卷",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:18",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                },
+                {
+                    "id": 4,
+                    "name": "返现红包",
+                    "description": null,
+                    "status": 1,
+                    "type": 1,
+                    "addDate": "2017-12-01 13:30:30",
+                    "addUser": 7,
+                    "addUserName": null,
+                    "addUserLoginId": null,
+                    "updDate": null,
+                    "updUser": null
+                }
+            ],
+            "smallLabel": 12,
+            "smallLabelStr": "超多钱",
+            "raiseProgress": 100
+        }
+    ]
 }
