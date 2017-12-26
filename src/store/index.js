@@ -24,8 +24,8 @@ const mutations = {
 }
 
 const actions = {
-	changeLoginState({commit}){
-		commit('changeLoginState')
+	changeLoginState({commit}, param){
+		commit('changeLoginState',param)
 	},
 	changeDialog({commit}, param){
 		commit('changeDialog',param)

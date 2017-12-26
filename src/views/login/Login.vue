@@ -10,12 +10,12 @@
         <div class="mask">
           <p class="title">请完成验证码</p>
           <div class="iptBox">
-            <input type="tel" placeholder="输入以上图中的字符" v-model="user.code" />
+            <input type="tel" placeholder="输入以上图中的字符" v-model="user.code" maxlength="4" />
             <img alt="验证码" src="data:image/png;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAeADwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD1hl3Y+ZgR3BqFpJY2VWw2eAegb2Poar6nqBs9NvJ0AEsUDyJuHG5VJwa5q00axn8Lx3skiSz3EAlkv5DvkikxndvzkbSMYyPu896u2lzKELq7OsFyCzFQ3XBDKeD/APX6UsU37ncW3bSd/r161yVrrE2qaPokTvJBJdO5lkTjzFjzuGVwRuIHTpWhdRW+l3mnTWoKW08/2eS3iGFcuPlJGcBgQOepGOeKTTTsTL3W1bY3HKn9/E54IzyMHj36dqVbtGH3WLYB2rz/ACrD/wCEd0iSS5lv42kfcztO8jrtXqM84GBx+FRaRpotLe8ksVFubtCbRt5ORt+QnPTJy2DyNwHUVkpSvZr8f+AVZHRrLHM2xlHqA2Cfypqwh0BDuhHBCHAJHBNczqthFY6HFJDFjUVZDHcKuZJpGPOepJOW4JP0rfWQ5YNbmUhjyR09unrVp9xW7DrktGzvIpaIj+BSx4GfujJP4c8ce/NKuh2uhy6nb2wNpJG0/wBmacmJnxkKU3FM5wuMcEDHIrpbmYAyQHdgkHPp0NQQWenBxdiwt1uncgzLCu8sRyc4755+pq07FxdlqctZWTabpGgTXWU+zs4lxGR5YlyQXJxjGVB+p9OdW9RL/U9NstzmQTi5cgZ2ogJ554BJAz6k/jsojw3GyJhzkDPfjPP5020tYrcOtvDDDFKeURMDOM9sdqTd3cmet331MbX7tEeysHQ/6ZcKkpJP3AQGGQc98fSte+mhs7SS4mZESMb8qmD7beec/wBRUjW8fmu8kcbzRqxSQoNynGSQe2c9vSmP5VzCYDGDCxVSjqHXJOeh69KzUWm2O/YybW9sdj6lqV7azTiNjHAkynyR1KqO7nu34DitZLoeWjJI6hhnlck+5zyD7VU/sqxSXP2G0O5N4HkLg/px0rVEJkdy0jqcgEI2B0FUkxaLc//Z">
           </div>
           <div class="btnBox maskBtn">
             <button class="btn" @click="cancel()">取消</button>
-            <button class="btn" :class="{'gray': !user.code}" :disabled="!user.code" @cilck="next(user)">确定</button>
+            <button class="btn" :class="{'gray': !user.code}" :disabled="!user.code" @click="cofirm(user)">确定</button>
           </div>
         </div>
       </div>
@@ -98,6 +98,7 @@ export default {
     cancel() {
       this.isShow = false;
       this.params.title = '登录/注册';
+      this.user.code = '';
     },
     openeye() {
       this.eyeOpen = !this.eyeOpen;
@@ -107,6 +108,7 @@ export default {
       self.$http.get('/home').then(function(res){
         let data = res.data.data.login;
         if(user.password == data.password){
+          self.$store.dispatch('changeLoginState', true);
           self.$router.go(-1);
           self.params.title = '登录/注册';
           self.loginRegister = 'loginRegister';
@@ -118,6 +120,22 @@ export default {
           self.$store.dispatch('changeDialog', dialog)
         }
       })
+    },
+    cofirm(user) {
+      let self = this;
+      if(user.code == 9072){
+        let dialog = {
+            dialog: true,
+            text: '注册功能还未实现！',
+          }
+        self.$store.dispatch('changeDialog', dialog)
+      }else{
+        let dialog = {
+            dialog: true,
+            text: '验证码不正确！',
+          }
+        self.$store.dispatch('changeDialog', dialog)
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="homeBox">
-    <div class="head">为您准备大礼</div>
-    <div class="coupon">
+    <div class="head" v-if="!isLogin">为您准备大礼</div>
+    <div class="coupon" v-if="!isLogin">
       <ul>
         <li>
           <div class="item">
@@ -32,6 +32,41 @@
       </ul>
       <div class="btnBox"><router-link to="/login" class="btn">立即注册领取</router-link></div>
     </div>
+    <div class="banlance" v-if="isLogin">
+      <div class="top">
+        <p class="title">总资产</p>
+        <p class="number num">13,888.01</p>
+        <p class="total">累计收益(元)：<span class="number">100.01</span></p>
+      </div>
+      <div class="mid">
+        <div class="left">
+          <div class="fctyIcon"></div>
+          <div>
+            <p>翡翠体验</p>
+            <p class="number">200.00</p>
+          </div>
+          <div class="arrowIcon"></div>
+        </div>
+        <div class="right">
+          <div class="fcjhIcon"></div>
+          <div>
+            <p>翡翠计划</p>
+            <p class="number">20,000.00</p>
+          </div>
+          <div class="arrowIcon"></div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="left">
+          <p>可用余额(元)</p>
+          <p class="number">200.00</p>
+        </div>
+        <div class="right">
+          <span>提现</span>
+          <span class="recharge">充值</span>
+        </div>
+      </div>
+    </div>
     <div class="carouselBox">
       <swiper :options="swiperOption" ref="mySwiper">
       <!-- slides -->
@@ -42,7 +77,7 @@
     </div>
     <div class="planBox">
       <p class="title">翡翠计划</p>
-      <div class="profit" v-if="range.length>0"><p class="big"><span>{{range[index].baseRate}}</span>%</p><p class="small"><span>+{{range[index].activityRate}}</span>%</p></div>
+      <div class="profit" v-if="range.length>0"><p class="big"><span>{{range[index].baseRate}}</span>%</p><p class="small" v-if="range[index].activityRate"><span>+{{range[index].activityRate}}</span>%</p></div>
       <p class="year">预期年化收益</p>
       <div class="tabBox">
         <ul class="tab">
@@ -105,11 +140,11 @@ export default {
     swiper,
     swiperSlide
   },
-  // computed: {
-  //   ...mapGetters({
-  //     isLogin: 'login'
-  //   })
-  // },
+  computed: {
+    isLogin() {
+      return this.$store.getters.login
+    }
+  },
   created() {
     let self = this;
     this.$http.get('/home').then(function(res){
@@ -302,13 +337,13 @@ export default {
     padding: 0.1rem 0;
   }
   .tabBox{
-    padding: 0 0.14rem;
     .result{
       text-align: center;
       margin: 0.09rem 0 0.08rem 0;
     }
     .btnBox{
       height: 0.4rem;
+      @include border-1px($color-e5e5e5, true, false)
       a{
         color: $color-0F85FF;
         font-size: 0.16rem;
@@ -323,6 +358,7 @@ export default {
     justify-content: space-between;
     color: $color-666666;
     font-size: 0.12rem;
+    margin: 0 0.14rem;
     position: relative;
     &:after{
       content: '';
@@ -370,6 +406,106 @@ export default {
             border-right: 0.03rem solid transparent;
             border-top: 0.036rem solid $color-0F85FF;
           }
+        }
+      }
+    }
+  }
+  .banlance{
+    height: 2.6rem;
+    background-color: $color-ffffff;
+    .top{
+      height: 1.4rem;
+      padding-top: 0.26rem;
+      background: url('/src/assets/images/topbg.png') no-repeat;
+      background-size: cover;
+      p{
+        color: $color-ffffff;
+        text-align: center;
+      }
+      .title{
+        font-size: 0.12rem;
+        font-weight: 100;
+        padding: 0;
+        margin: 0;
+      }
+      .num{
+        font-size: 0.38rem;
+        margin-bottom: 0.05rem;
+      }
+      .total{
+        font-size: 0.12rem;
+        font-weight: 100;
+      }
+    }
+    .mid{
+      padding: 0.1rem;
+      font-size: 0;
+      @include border-1px($color-e5e5e5, false, true);
+      >div{
+        width: 50%;
+        padding: 0 0.1rem;
+        &:first-child{
+          border-right: 1px solid $color-e5e5e5;
+        }
+      }
+      div{
+        display: inline-block;
+        font-size: 0.14rem;
+      }
+      .fctyIcon,.fcjhIcon{
+        width: 0.3rem;
+        height: 0.3rem;
+        background: url('/src/assets/images/home-icon-3.png') no-repeat;
+        background-size: cover;
+        margin: 0.06rem 0.1rem 0 0;
+        vertical-align: top;
+      }
+      .fctyIcon{
+        background-position: -0.32rem 0;
+      }
+      .left,.right{
+        position: relative;
+      }
+      .right{
+        .arrowIcon{
+          margin-right: 0;
+        }
+      }
+      .arrowIcon{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 0.09rem;
+        height: 0.13rem;
+        margin: -0.065rem 0.1rem 0 0;
+        background: url('/src/assets/images/arrow_icon.png') no-repeat;
+        background-size: cover;
+      }
+    }
+    .bottom{
+      font-size: 0;
+      padding: 0.1rem;
+      >div{
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 0.12rem;
+        width: 50%;
+      }
+      .left{
+        text-align: left;
+        height: 0.4rem;
+      }
+      .right{
+        text-align: right;
+        height: 0.4rem;
+        line-height: 0.4rem;
+        vertical-align: top;
+        span{
+          padding: 0 0.1rem;
+        }
+        .recharge{
+          color: $color-0F85FF;
+          border-left: 1px solid $color-e5e5e5;
         }
       }
     }
