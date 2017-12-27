@@ -126,7 +126,7 @@ export default {
       if(user.code == 9072){
         let dialog = {
             dialog: true,
-            text: '注册功能还未实现！',
+            text: '注册功能还未实现！尝试18632100000，a123456登录',
           }
         self.$store.dispatch('changeDialog', dialog)
       }else{
