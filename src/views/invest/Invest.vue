@@ -20,7 +20,8 @@
                 <p>投资期限</p>
               </div>
               <div>
-                <CircleCan :paramdata="circle" :canvasId="'canvas_'+$index"></CircleCan>
+                <CircleCan :paramdata="circle" :canvasId="'canvas_'+$index" :precentNum="item.raiseProgress" v-if="item.status == 5"></CircleCan>
+                <span v-if="item.status != 5" class="sellOut">售罄</span>
               </div>
             </div>
           </div>
@@ -214,5 +215,16 @@ export default {
         }
       }
     }
+  }
+  .sellOut{
+    display: block;
+    width: 0.4rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    border-radius: 50%;
+    font-size: 0.12rem;
+    color: #999;
+    background-color: #e5e5e5;
+    text-align: center;
   }
 </style>
