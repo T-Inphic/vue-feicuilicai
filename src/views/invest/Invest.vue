@@ -127,7 +127,7 @@ export default {
             border: 1px solid $color-0F85FF;
             border-radius: 0.2rem;
             padding: 0 0.05rem;
-            margin: 0.02rem 0.05rem 0;
+            margin: 0.01rem 0.05rem 0;
           }
         }
       }

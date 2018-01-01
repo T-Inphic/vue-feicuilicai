@@ -94,7 +94,8 @@
     },
     "login": {
         "phone": 18632100000,
-        "password": "a123456"
+        "password": "a123456",
+        "name": "王小五"
     },
     "productList": [
         {
