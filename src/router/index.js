@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from '@/views/home/Home'
 import Invest from '@/views/invest/Invest'
 import My from '@/views/my/My'
+import About from '@/views/my/about/About'
+import Invite from '@/views/my/invite/Invite'
 import Login from '@/views/login/Login'
 import Bottom from '@/views/base/bottom'
 
@@ -21,9 +23,6 @@ const router = new Router({
       		path: 'home',
       		name: 'home',
       		component: Home,
-      		meta: {
-      			requireAth: true
-      		}
       	},
       	{
       		path: 'invest',
@@ -41,17 +40,36 @@ const router = new Router({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: About,
+    },
+    {
+      path: '/invite',
+      name: 'invite',
+      component: Invite,
+      meta: {
+      	requireAth: true
+      }
     }
   ]
 })
 
 router.beforeEach((to, from, next) => {
-	next()
-	// if(to.meta.requireAth){
-	// 	next()
-	// }else{
-
-	// }
+	if(to.meta.requireAth){
+		if(!router.app.$store.getters.login){
+			next({
+                path: '/login',
+                query: {redirect: to.fullPath}
+            })
+		}else{
+			next()
+		}
+	}else{
+		next()
+	}
 })
 
 export default router

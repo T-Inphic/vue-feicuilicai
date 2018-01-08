@@ -155,7 +155,7 @@ export default {
   },
   methods: {
     swiper() {
-      return this.$refs.mySwiper.swiper;  
+      return this.$refs.mySwiper.swiper;
     },
     tab(day) {
       this.index = day;
