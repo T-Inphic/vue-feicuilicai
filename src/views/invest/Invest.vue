@@ -95,7 +95,7 @@ export default {
       left: 0;
       width: 0.379rem;
       height: 0.385rem;
-      background: url('/src/assets/images/babel_icon.png') no-repeat;
+      background: url('/static/assets/images/babel_icon.png') no-repeat;
       background-size: cover;
       span{
         display: block;

@@ -255,7 +255,7 @@ export default {
       display: inline-block;
       width: 0.6rem;
       height: 0.6rem;
-      background: url('/src/assets/images/loginLogo.png') no-repeat;
+      background: url('/static/assets/images/loginLogo.png') no-repeat;
       background-size: cover;
     }
     .phone{
@@ -288,7 +288,7 @@ export default {
     margin: 0.1805rem 0.24rem 0 0;
     width: 0.22rem;
     height: 0.139rem;
-    background: url('/src/assets/images/eye.png') no-repeat;
+    background: url('/static/assets/images/eye.png') no-repeat;
     background-size: cover;
     background-position: 0 -0.12rem;
     &.active{

@@ -104,7 +104,7 @@ export default {
           &:first-child{
             width: 0.22rem;
             height: 0.22rem;
-            background: url('/src/assets/images/tab_icon.png') no-repeat;
+            background: url('/static/assets/images/tab_icon.png') no-repeat;
             background-size: 300%;
             margin-bottom: 0.02rem;
           }

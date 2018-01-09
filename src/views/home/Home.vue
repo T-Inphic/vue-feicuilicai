@@ -228,7 +228,7 @@ export default {
       width: 0.36rem;
       height: 0.36rem;
       margin-right: 0.08rem;
-      background: url('/src/assets/images/home-icon-1.png') no-repeat 0 0;
+      background: url('/static/assets/images/home-icon-1.png') no-repeat 0 0;
       background-size: cover;
     }
     .tyjIcon{
@@ -245,7 +245,7 @@ export default {
     right: 0;
     width: 0.385rem;
     height: 0.385rem;
-    background: url('/src/assets/images/home-icon-2.png') no-repeat;
+    background: url('/static/assets/images/home-icon-2.png') no-repeat;
     background-size: cover;
   }
   .carouselBox{
@@ -310,7 +310,7 @@ export default {
           width: 0.5rem;
           height: 0.5rem;
           margin: 0 auto 0.05rem;
-          background: url('/src/assets/images/home-icon-4.png') no-repeat;
+          background: url('/static/assets/images/home-icon-4.png') no-repeat;
           background-size: auto 100%;
         }
       }
@@ -386,7 +386,7 @@ export default {
           bottom: 0;
           left: 50%;
           margin-left: -0.14rem;
-          background: url('/src/assets/images/tabBg.png') no-repeat;
+          background: url('/static/assets/images/tabBg.png') no-repeat;
           background-size: cover;
           z-index: 10;
         }
@@ -416,7 +416,7 @@ export default {
     .top{
       height: 1.4rem;
       padding-top: 0.26rem;
-      background: url('/src/assets/images/topbg.png') no-repeat;
+      background: url('/static/assets/images/topbg.png') no-repeat;
       background-size: cover;
       p{
         color: $color-ffffff;
@@ -455,7 +455,7 @@ export default {
       .fctyIcon,.fcjhIcon{
         width: 0.3rem;
         height: 0.3rem;
-        background: url('/src/assets/images/home-icon-3.png') no-repeat;
+        background: url('/static/assets/images/home-icon-3.png') no-repeat;
         background-size: cover;
         margin: 0.06rem 0.1rem 0 0;
         vertical-align: top;
@@ -478,7 +478,7 @@ export default {
         width: 0.09rem;
         height: 0.13rem;
         margin: -0.065rem 0.1rem 0 0;
-        background: url('/src/assets/images/arrow_icon.png') no-repeat;
+        background: url('/static/assets/images/arrow_icon.png') no-repeat;
         background-size: cover;
       }
     }

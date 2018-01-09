@@ -42,7 +42,7 @@ export default {
           width: 0.095rem;
           height: 0.19rem;
           margin: 0.125rem 0 0 0.14rem;
-          background: url('/src/assets/images/back.png') no-repeat;
+          background: url('/static/assets/images/back.png') no-repeat;
           background-size: cover;
           vertical-align: top;
         }

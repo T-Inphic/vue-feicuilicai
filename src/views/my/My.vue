@@ -104,11 +104,11 @@ export default {
     .left{
       width: 0.64rem;
       height: 0.64rem;
-      background: url('/src/assets/images/logo-icon.png') no-repeat;
+      background: url('/static/assets/images/logo-icon.png') no-repeat;
       background-size: cover;
       margin-left: 0.14rem;
       &.active{
-        background: url('/src/assets/images/logo-icon.png') no-repeat;
+        background: url('/static/assets/images/logo-icon.png') no-repeat;
         background-size: cover;
         background-position: -0.69rem 0;
       }
@@ -141,7 +141,7 @@ export default {
         width: 0.24rem;
         height: 0.24rem;
         margin: 0.14rem auto 0.02rem;
-        background: url('/src/assets/images/category-icon.png') no-repeat;
+        background: url('/static/assets/images/category-icon.png') no-repeat;
         background-size: cover;
       }
       &:last-child{
@@ -192,7 +192,7 @@ export default {
         height: 0.109rem;
         margin-top: 0.1955rem;
         margin-right: 0.161rem;
-        background: url('/src/assets/images/arrow_icon.png') no-repeat;
+        background: url('/static/assets/images/arrow_icon.png') no-repeat;
         background-size: cover;
       }
       p{
@@ -202,7 +202,7 @@ export default {
             display: inline-block;
             width: 0.18rem;
             height: 0.18rem;
-            background: url('/src/assets/images/my-icon.png') no-repeat;
+            background: url('/static/assets/images/my-icon.png') no-repeat;
             background-size: cover;
             vertical-align: top;
             margin: 0.15rem 0.05rem 0 0;
